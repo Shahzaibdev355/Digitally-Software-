@@ -76,14 +76,14 @@ const Contact = () => {
     event.preventDefault(); 
 
     // API calls
-    const isSuccess = true; // Change this to `false` to test error popup
+    // const isSuccess = true; // Change this to `false` to test error popup
 
     try {
-      // const response = axios.post("", formValues);
+      const response = axios.post("http://localhost:5000/contactus", formValues);
 
 
 
-      if (isSuccess) {
+      if (response===200) {
         Swal.fire({
           icon: "success",
           title: "Success!",
